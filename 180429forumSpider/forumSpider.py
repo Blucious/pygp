@@ -254,7 +254,7 @@ class HtmlConstructor:
         t = None
         for item in seq:
             if t != type(item) and t is not None:
-                break
+                return None
             t = type(item)
         return t
 
