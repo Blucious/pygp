@@ -144,7 +144,7 @@ class Downloader:
     DEFAULTS = {'timeout': TIMEOUT, 'headers': HEADERS}
 
     def __init__(self, cookies=None):
-        if cookies is None:
+        if not cookies:
             kvpd = {}
         elif isinstance(cookies, str):
             kvpl = cookies.strip('"').split('; ')
